@@ -97,7 +97,7 @@ const InfoCards = () => {
               )}
 
               {/* Button */}
-              <button className="mt-6 bg-white text-blue-900 font-semibold py-3 px-8 rounded-full shadow-md hover:bg-orange-500 hover:text-white transition duration-300 w-full max-w-xs sm:max-w-sm">
+              <button className="mt-6 bg-white cursor-pointer text-blue-900 font-semibold py-3 px-8 rounded-full shadow-md hover:bg-orange-500 hover:text-white transition duration-300 w-full max-w-xs sm:max-w-sm">
                 {card.buttonText}
               </button>
             </div>

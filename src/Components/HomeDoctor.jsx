@@ -169,11 +169,11 @@ const ExpertDoctorsSection = () => {
                   </p>
 
                   <div className="flex gap-3 mt-auto flex-wrap">
-                    <button className="flex items-center justify-center gap-2 flex-1 px-4 py-2 bg-[#ff7137] text-white rounded-full text-sm sm:text-base font-medium hover:bg-[#e55b1c] transition">
+                    <button className="flex items-center justify-center gap-2 flex-1 px-4 py-2 bg-[#ff7137] text-white rounded-full text-sm sm:text-base font-medium hover:bg-white hover:text-[#0D3E87] hover:border hover:border-[#0D3E87] cursor-pointer transition">
                       <FaCalendarAlt />
                       Book
                     </button>
-                    <button className="flex items-center justify-center gap-2 flex-1 px-4 py-2 border border-[#0D3E87] text-[#0D3E87] rounded-full text-sm sm:text-base font-medium hover:bg-[#0D3E87] hover:text-white transition">
+                    <button className="flex items-center justify-center gap-2 flex-1 px-4 py-2 border border-[#0D3E87] text-[#0D3E87] rounded-full text-sm sm:text-base font-medium hover:bg-[#0D3E87] cursor-pointer hover:text-white transition">
                       <FaUserMd />
                       Profile
                     </button>

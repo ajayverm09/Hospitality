@@ -26,11 +26,11 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <div className="flex gap-4">
-          <button className="flex items-center gap-2 bg-orange-500 text-white hover:text-black font-semibold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300">
+          <button className="flex items-center gap-2 cursor-pointer bg-orange-500 text-white hover:text-black font-semibold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300">
             <FaCalendarAlt className="w-5 h-5" />
             Book Appointment
           </button>
-          <button className="flex items-center gap-2 border-2 border-white text-white font-semibold py-3 px-6 rounded-full text-lg hover:bg-white hover:text-blue-900 transition duration-300">
+          <button className="flex items-center gap-2 border-2 cursor-pointer border-white text-white font-semibold py-3 px-6 rounded-full text-lg hover:bg-white hover:text-blue-900 transition duration-300">
             <FaStethoscope className="w-5 h-5" />
             Our Services
           </button>

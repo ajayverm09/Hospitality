@@ -159,7 +159,7 @@ const CentersOfExcellence = () => {
               key={index}
               onClick={() => setSelectedSpecialty(index)}
               className={`
-        group relative rounded-full p-2 text-lg overflow-hidden transition-all duration-500
+        group relative rounded-full p-2 cursor-pointer text-lg overflow-hidden transition-all duration-500
         flex items-center justify-center
         ${
           selectedSpecialty === index
@@ -182,9 +182,11 @@ const CentersOfExcellence = () => {
               <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#D76833] to-[#184082] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
 
               {/* Icon + Name */}
-              <div className={`relative z-10 flex items-center space-x-2 transition-colors duration-300 ${
-                selectedSpecialty === index || "group-hover:text-white"
-              }`}>
+              <div
+                className={`relative z-10 flex items-center space-x-2 transition-colors duration-300 ${
+                  selectedSpecialty === index || "group-hover:text-white "
+                }`}
+              >
                 <span className="text-2xl">{specialty.icon}</span>
                 <h3 className="text-lg font-semibold">{specialty.name}</h3>
               </div>
@@ -238,7 +240,8 @@ const CentersOfExcellence = () => {
               </ul>
 
               <button
-                className="text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105"
+                onClick={() => (window.location.href = "/blogs")}
+                className="text-white font-semibold py-3 px-8 cursor-pointer rounded-lg transition duration-300 transform hover:scale-105"
                 style={{
                   background: "linear-gradient(to right, #D76833, #184082)",
                 }}
@@ -289,7 +292,10 @@ const CentersOfExcellence = () => {
               healthcare.
             </p>
 
-            <button className=" text-white bg-[#184082] hover:bg-gradient-to-r from-[#D76833] to-[#184082] hover:text-white text-xl py-3 px-8 rounded-full">
+            <button
+              onClick={() => (window.location.href = "/contact")}
+              className="text-white bg-[#184082] cursor-pointer hover:bg-gradient-to-r from-[#D76833] to-[#184082] hover:text-white text-xl py-3 px-8 rounded-full"
+            >
               Book your consultation today!
             </button>
           </div>

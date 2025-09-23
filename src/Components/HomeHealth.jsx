@@ -1,27 +1,39 @@
 import React from "react";
-import { FaHeartbeat, FaBaby, FaBone, FaUserMd, FaSyringe, FaPills } from "react-icons/fa";
+import {
+  FaHeartbeat,
+  FaBaby,
+  FaBone,
+  FaUserMd,
+  FaSyringe,
+  FaPills,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const services = [
   {
+    id: 1,
     icon: <FaHeartbeat className="text-white text-xl" />,
     title: "Heart Care (Cardiology)",
     description:
       "From 24/7 cardiac emergencies to heart surgery and rehab, we've got your heart covered.",
     tags: ["Heart Surgery", "Cath Lab", "ECG"],
     status: "24/7 Emergency",
-    imageUrl: "https://noblehealthcity.com/assets/img/Heart-Care-(Cardiology).webp",
+    imageUrl:
+      "https://noblehealthcity.com/assets/img/Heart-Care-(Cardiology).webp",
   },
   {
+    id: 2,
     icon: <FaBaby className="text-white text-xl" />,
     title: "IVF & Fertility Center",
     description:
       "Personalized fertility treatments using advanced reproductive tech to help you start your family.",
     tags: ["IVF", "IUI", "Fertility Tests"],
     status: "24/7 Trauma",
-    imageUrl: "https://noblehealthcity.com/assets/img/IVF-&-Fertility-Center.webp",
+    imageUrl:
+      "https://noblehealthcity.com/assets/img/IVF-&-Fertility-Center.webp",
   },
   {
+    id: 3,
     icon: <FaBone className="text-white text-xl" />,
     title: "Orthopedics & Sports Medicine",
     description:
@@ -31,6 +43,7 @@ const services = [
     imageUrl: "https://noblehealthcity.com/assets/img/sport-injury.webp",
   },
   {
+    id: 4,
     icon: <FaUserMd className="text-white text-xl" />,
     title: "ENT & Head & Neck Oncology",
     description:
@@ -40,14 +53,18 @@ const services = [
     imageUrl: "https://noblehealthcity.com/assets/img/ent.webp",
   },
   {
+    id: 5,
     icon: <FaSyringe className="text-white text-xl" />,
     title: "Laparoscopy & GI Surgery",
-    description: "Minimally invasive surgeries for quicker recovery and less pain.",
+    description:
+      "Minimally invasive surgeries for quicker recovery and less pain.",
     tags: ["Laparoscopy", "Bariatric"],
     status: "Open Daily",
-    imageUrl: "https://noblehealthcity.com/assets/img/Laparoscopy-&-GI-Surgery.webp",
+    imageUrl:
+      "https://noblehealthcity.com/assets/img/Laparoscopy-&-GI-Surgery.webp",
   },
   {
+    id: 6,
     icon: <FaPills className="text-white text-xl" />,
     title: "Pharmacy",
     description:
@@ -78,9 +95,9 @@ const HealthExcellence = () => {
 
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {services.map((service, index) => (
+        {services.map((service) => (
           <div
-            key={index}
+            key={service.id}
             className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-6 flex flex-col justify-between"
           >
             <div className="space-y-4">
@@ -122,12 +139,15 @@ const HealthExcellence = () => {
 
             {/* Footer */}
             <div className="flex items-center justify-between pt-6 border-t border-gray-200 mt-4">
-              <div className="flex items-center space-x-2 text-orange-600 font-semibold text-sm">
+              <Link
+                to={`/blog/${service.id}`}
+                className="flex items-center space-x-2 text-orange-600 font-semibold text-sm group-hover:text-[#184082]"
+              >
                 <span>Learn More</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </div>
+              </Link>
               <div className="flex items-center text-gray-500 text-sm">
                 <span className="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
                 <span>{service.status}</span>
@@ -139,7 +159,10 @@ const HealthExcellence = () => {
 
       {/* CTA */}
       <div className="mt-12 w-full max-w-sm">
-        <button className="w-full py-4 px-6 rounded-full text-white font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-orange-500 to-blue-800">
+        <button
+          onClick={() => (window.location.href = "/contact")}
+          className="w-full py-4 px-6 rounded-full text-white cursor-pointer font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-orange-500 to-blue-800"
+        >
           Schedule Your Consultation Today
         </button>
       </div>

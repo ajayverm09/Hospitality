@@ -62,7 +62,7 @@ const Navbar = () => {
           </Link>
           {/* Appointment Button for Desktop */}
           <Link to="/appointment">
-            <button className="text-white bg-[#F77300] font-medium px-4 py-2 rounded-lg transition duration-300 hover:bg-[#d96500]">
+            <button className="text-white bg-[#F77300] font-medium cursor-pointer px-4 py-2 rounded-lg transition duration-300 hover:bg-[#d96500]">
               Appointment
             </button>
           </Link>
